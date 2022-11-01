@@ -4,32 +4,30 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 
-import 'package:breaking_bad_api/src/models/address_model.dart';
+import '../models/harry_potter.dart';
 
-class ZipCodeRepository {
-  Future<List<Address>> getCep({required String cep}) async {
+class HerryPotterRepository {
+  Future<List<HarryPotter>> getHarryPotter() async {
     final Dio dio = Dio(
       BaseOptions(
-        baseUrl: 'https://viacep.com.br/ws/$cep/json/',
+        baseUrl: 'https://hp-api.herokuapp.com/api/characters',
         headers: {
           'Content-type': 'application/json',
         },
       ),
     );
 
-    List<Address> dataList = [];
     try {
       final response = await dio.get('');
 
-      final data = jsonDecode(response.toString());
+     final data = List.from(response.data);
 
-      dataList.add(Address.fromMap(data));
+      final mapList = data.map((e) => Map<String, dynamic>.from(e)).toList();
 
-      return dataList.toList();
-
+      return mapList.map((e) => HarryPotter.fromMap(e)).toList();
     } catch (e) {
       if (e.toString().contains('Null')) {
-        log('Cep inválido!');
+        log('Erro ao processar!');
       } else {
         log('Error: $e');
       }

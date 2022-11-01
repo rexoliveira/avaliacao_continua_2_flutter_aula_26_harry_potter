@@ -1,4 +1,4 @@
-import 'package:breaking_bad_api/src/get_zip_code/zip_code_page.dart';
+import 'package:breaking_bad_api/src/herry_potter/harry_potter_page.dart';
 import 'package:breaking_bad_api/utils/custom_theme_data.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {'/': (contex) => const MyHomePage()},
-      title: 'Flutter Demo',
+      title: '',
       theme: CustomThemeData.themeData,
     );
   }

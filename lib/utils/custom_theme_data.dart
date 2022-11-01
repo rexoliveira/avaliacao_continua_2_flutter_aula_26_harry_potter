@@ -8,13 +8,13 @@ class CustomThemeData {
     textTheme:  TextTheme(
       titleSmall: const TextStyle(
         color: Color.fromARGB(255, 68, 68, 68),
-        fontSize: 18.0,
-        fontWeight: FontWeight.w600,
+        fontSize: 16.0,
+        fontWeight: FontWeight.w400,
         letterSpacing: 0.2,        
       ),
-      titleMedium: const TextStyle(
-        color: Colors.white,
-        fontSize: 22.0,
+      titleMedium:  TextStyle(
+        color: Colors.green.shade800,
+        fontSize: 18.0,
         fontWeight: FontWeight.w600,
         letterSpacing: 0.2,
         fontStyle: FontStyle.normal,
@@ -22,6 +22,11 @@ class CustomThemeData {
       titleLarge:  TextStyle(
         color: Colors.red.shade400,
         fontSize: 28.0,
+        fontWeight: FontWeight.w600,
+      ),
+      labelLarge:  const TextStyle(
+        color: Colors.white,
+        fontSize: 22.0,
         fontWeight: FontWeight.w600,
       ),
     ),
