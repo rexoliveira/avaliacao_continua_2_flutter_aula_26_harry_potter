@@ -1,6 +1,9 @@
-import 'package:breaking_bad_api/src/herry_potter/harry_potter_page.dart';
+import 'package:breaking_bad_api/routes/consts_routes.dart';
 import 'package:breaking_bad_api/utils/custom_theme_data.dart';
 import 'package:flutter/material.dart';
+
+import 'routes/routes.dart';
+import 'utils/consts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {'/': (contex) => const MyHomePage()},
-      title: '',
+      initialRoute: ConstsRoutes.source,
+      routes: Routes.routes,
+      title: Consts.titleMain,
       theme: CustomThemeData.themeData,
     );
   }
