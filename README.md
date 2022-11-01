@@ -1,12 +1,12 @@
-# breaking_bad_api
+# Harry Potter
 
-Projeto utilizando a API de sitações do Breaking Bad!
+Projeto utilizando a API de persinagens do Harry Potter!
 
 ## Getting Started
 
 Recursos utilizados :
 [Dio](https://pub.dev/packages/dio)
 
-Api do [BreakingBad](https://breakingbadquotes.xyz/)
+Api do [HarryPotter](https://hp-api.herokuapp.com/api/characters)
 
-[Lista de Api's públicas](https://github.com/public-apis/public-apis)
+[Use estas rotas para solicitar dados sobre os personagens de Harry Potter](https://hp-api.herokuapp.com/)
